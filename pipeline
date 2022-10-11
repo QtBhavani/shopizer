@@ -1,2 +1,15 @@
-asdffghf
-sjdhjd
+pipeline {
+    agent {label'JDK11 && MVN'}
+    stages {
+        stage('clone') {
+           steps {
+            git url:'https://github.com/QtBhavani/shopizer.git' , branch :'SPRINT_1_DEV'
+            }
+        }
+        stage('install') {
+            steps {
+            sh 'mvn package'
+            }
+        }
+    }
+}
