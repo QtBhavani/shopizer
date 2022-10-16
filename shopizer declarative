@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'JDK11 && MVN3 && NVM && PY3'}
+    agent {label 'jdk11'}
     triggers {
         pollSCM('* * * * *')
     stages {
