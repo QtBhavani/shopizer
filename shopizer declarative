@@ -1,7 +1,8 @@
 pipeline {
-    agent {label 'GRADLE && JDK11 && NVM && PY3' }
+    agent {label 'jdk11' }
     triggers {
         cron('30 17 * * *')
+    }
     stages {
         stage('clone') {
             steps {
